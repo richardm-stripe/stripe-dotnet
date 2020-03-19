@@ -29,7 +29,7 @@ namespace Stripe
         public Dictionary<string, string> Metadata { get; set; }
 
         [JsonProperty("package_dimensions")]
-        public PackageDimensionOptions PackageDimensions { get; set; }
+        public PackageDimensionsOptions PackageDimensions { get; set; }
 
         [JsonProperty("price")]
         public long? Price { get; set; }

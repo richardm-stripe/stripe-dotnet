@@ -29,11 +29,7 @@ namespace Stripe
             return this.GetNestedEntity(parentId, id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<Capability> GetAsync(string parentId, string id, CapabilityGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<Capability> GetAsync(string parentId, string id, CapabilityGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.GetNestedEntityAsync(parentId, id, options, requestOptions, cancellationToken);
         }
@@ -43,11 +39,7 @@ namespace Stripe
             return this.ListNestedEntities(parentId, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<StripeList<Capability>> ListAsync(string parentId, CapabilityListOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<StripeList<Capability>> ListAsync(string parentId, CapabilityListOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.ListNestedEntitiesAsync(parentId, options, requestOptions, cancellationToken);
         }
@@ -62,11 +54,7 @@ namespace Stripe
             return this.UpdateNestedEntity(parentId, id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<Capability> UpdateAsync(string parentId, string id, CapabilityUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<Capability> UpdateAsync(string parentId, string id, CapabilityUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.UpdateNestedEntityAsync(parentId, id, options, requestOptions, cancellationToken);
         }

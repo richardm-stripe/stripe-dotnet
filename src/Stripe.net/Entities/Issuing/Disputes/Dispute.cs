@@ -23,6 +23,29 @@ namespace Stripe.Issuing
         [JsonProperty("currency")]
         public string Currency { get; set; }
 
+        #region Expandable Disputed Transaction
+        [JsonIgnore]
+        public string DisputedTransactionId
+        {
+            get => this.InternalDisputedTransaction?.Id;
+            set => this.InternalDisputedTransaction = SetExpandableFieldId(value, this.InternalDisputedTransaction);
+        }
+
+        [JsonIgnore]
+        public Transaction DisputedTransaction
+        {
+            get => this.InternalDisputedTransaction?.ExpandedObject;
+            set => this.InternalDisputedTransaction = SetExpandableFieldObject(value, this.InternalDisputedTransaction);
+        }
+
+        [JsonProperty("disputed_transaction")]
+        [JsonConverter(typeof(ExpandableFieldConverter<Transaction>))]
+        internal ExpandableField<Transaction> InternalDisputedTransaction { get; set; }
+        #endregion
+
+        [JsonProperty("evidence")]
+        public Evidence Evidence { get; set; }
+
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
 
@@ -34,25 +57,5 @@ namespace Stripe.Issuing
 
         [JsonProperty("status")]
         public string Status { get; set; }
-
-        #region Expandable Transaction
-        [JsonIgnore]
-        public string TransactionId
-        {
-            get => this.InternalTransaction?.Id;
-            set => this.InternalTransaction = SetExpandableFieldId(value, this.InternalTransaction);
-        }
-
-        [JsonIgnore]
-        public Transaction Transaction
-        {
-            get => this.InternalTransaction?.ExpandedObject;
-            set => this.InternalTransaction = SetExpandableFieldObject(value, this.InternalTransaction);
-        }
-
-        [JsonProperty("transaction")]
-        [JsonConverter(typeof(ExpandableFieldConverter<Transaction>))]
-        internal ExpandableField<Transaction> InternalTransaction { get; set; }
-        #endregion
     }
 }

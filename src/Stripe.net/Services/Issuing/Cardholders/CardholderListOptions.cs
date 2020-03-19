@@ -10,6 +10,9 @@ namespace Stripe.Issuing
         [JsonProperty("email")]
         public string Email { get; set; }
 
+        [JsonProperty("is_default")]
+        public bool? IsDefault { get; set; }
+
         [JsonProperty("phone_number")]
         public string PhoneNumber { get; set; }
 

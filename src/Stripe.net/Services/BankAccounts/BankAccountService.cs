@@ -36,7 +36,6 @@ namespace Stripe
             return this.CreateNestedEntityAsync(parentId, options, requestOptions, cancellationToken);
         }
 
-<<<<<<< HEAD
         public virtual BankAccount Delete(string parentId, string id, BankAccountDeleteOptions options = null, RequestOptions requestOptions = null)
         {
             return this.DeleteNestedEntity(parentId, id, options, requestOptions);
@@ -45,16 +44,6 @@ namespace Stripe
         public virtual Task<BankAccount> DeleteAsync(string parentId, string id, BankAccountDeleteOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
         {
             return this.DeleteNestedEntityAsync(parentId, id, options, requestOptions, cancellationToken);
-=======
-        public virtual BankAccount Delete(string parentId, string id, RequestOptions requestOptions = null)
-        {
-            return this.DeleteNestedEntity(parentId, id, null, requestOptions);
-        }
-
-        public virtual Task<BankAccount> DeleteAsync(string parentId, string id, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            return this.DeleteNestedEntityAsync(parentId, id, null, requestOptions, cancellationToken);
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         }
 
         public virtual BankAccount Get(string parentId, string id, BankAccountGetOptions options = null, RequestOptions requestOptions = null)
@@ -87,11 +76,7 @@ namespace Stripe
             return this.UpdateNestedEntity(parentId, id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<BankAccount> UpdateAsync(string parentId, string id, BankAccountUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<BankAccount> UpdateAsync(string parentId, string id, BankAccountUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.UpdateNestedEntityAsync(parentId, id, options, requestOptions, cancellationToken);
         }
@@ -101,11 +86,7 @@ namespace Stripe
             return this.Request(HttpMethod.Post, $"{this.InstanceUrl(parentId, id)}/verify", options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<BankAccount> VerifyAsync(string parentId, string id, BankAccountVerifyOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<BankAccount> VerifyAsync(string parentId, string id, BankAccountVerifyOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.RequestAsync(HttpMethod.Post, $"{this.InstanceUrl(parentId, id)}/verify", options, requestOptions, cancellationToken);
         }

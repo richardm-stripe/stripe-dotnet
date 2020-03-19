@@ -28,11 +28,7 @@ namespace Stripe.Radar
             return this.GetEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<EarlyFraudWarning> GetAsync(string id, EarlyFraudWarningGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<EarlyFraudWarning> GetAsync(string id, EarlyFraudWarningGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.GetEntityAsync(id, options, requestOptions, cancellationToken);
         }

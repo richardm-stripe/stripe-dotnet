@@ -10,12 +10,9 @@ namespace Stripe.Checkout
         [JsonProperty("application_fee_percent")]
         public decimal? ApplicationFeePercent { get; set; }
 
-<<<<<<< HEAD
         [JsonProperty("default_tax_rates")]
         public List<string> DefaultTaxRates { get; set; }
 
-=======
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("items")]
         public List<SessionSubscriptionDataItemOptions> Items { get; set; }
 

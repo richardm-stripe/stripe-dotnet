@@ -20,10 +20,6 @@ namespace Stripe
         public string Currency { get; set; }
 
         #region Expandable Customer
-<<<<<<< HEAD
-=======
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
         public string CustomerId
         {
@@ -57,10 +53,6 @@ namespace Stripe
         public bool Discountable { get; set; }
 
         #region Expandable Invoice
-<<<<<<< HEAD
-=======
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
         public string InvoiceId
         {
@@ -96,13 +88,9 @@ namespace Stripe
         public bool Proration { get; set; }
 
         [JsonProperty("quantity")]
-        public long? Quantity { get; set; }
+        public long Quantity { get; set; }
 
         #region Expandable Subscription
-<<<<<<< HEAD
-=======
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
         public string SubscriptionId
         {
@@ -123,7 +111,7 @@ namespace Stripe
         #endregion
 
         [JsonProperty("subscription_item")]
-        public string SubscriptionItemId { get; set; }
+        public string SubscriptionItem { get; set; }
 
         [JsonProperty("tax_rates")]
         public List<TaxRate> TaxRates { get; set; }
@@ -135,6 +123,6 @@ namespace Stripe
         public long? UnitAmount { get; set; }
 
         [JsonProperty("unit_amount_decimal")]
-        public decimal? UnitAmountDecimal { get; set; }
+        public string UnitAmountDecimal { get; set; }
     }
 }

@@ -11,7 +11,8 @@ namespace Stripe.Radar
         ICreatable<ValueList, ValueListCreateOptions>,
         IDeletable<ValueList, ValueListDeleteOptions>,
         IListable<ValueList, ValueListListOptions>,
-        IRetrievable<ValueList, ValueListGetOptions>
+        IRetrievable<ValueList, ValueListGetOptions>,
+        IUpdatable<ValueList, ValueListUpdateOptions>
     {
         public ValueListService()
             : base(null)
@@ -40,11 +41,7 @@ namespace Stripe.Radar
             return this.DeleteEntity(id, null, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<ValueList> DeleteAsync(string id, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<ValueList> DeleteAsync(string id, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.DeleteEntityAsync(id, null, requestOptions, cancellationToken);
         }
@@ -54,11 +51,7 @@ namespace Stripe.Radar
             return this.GetEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<ValueList> GetAsync(string id, ValueListGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<ValueList> GetAsync(string id, ValueListGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.GetEntityAsync(id, options, requestOptions, cancellationToken);
         }
@@ -83,11 +76,7 @@ namespace Stripe.Radar
             return this.UpdateEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<ValueList> UpdateAsync(string id, ValueListUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<ValueList> UpdateAsync(string id, ValueListUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.UpdateEntityAsync(id, options, requestOptions, cancellationToken);
         }

@@ -8,7 +8,7 @@ namespace Stripe
     public class DisputeUpdateOptions : BaseOptions, IHasMetadata
     {
         [JsonProperty("evidence")]
-        public DisputeEvidenceOptions Evidence { get; set; }
+        public EvidenceOptions Evidence { get; set; }
 
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }

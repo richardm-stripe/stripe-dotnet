@@ -40,11 +40,7 @@ namespace Stripe
             return this.GetEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<TaxRate> GetAsync(string id, TaxRateGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<TaxRate> GetAsync(string id, TaxRateGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.GetEntityAsync(id, options, requestOptions, cancellationToken);
         }
@@ -69,11 +65,7 @@ namespace Stripe
             return this.UpdateEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<TaxRate> UpdateAsync(string id, TaxRateUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<TaxRate> UpdateAsync(string id, TaxRateUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.UpdateEntityAsync(id, options, requestOptions, cancellationToken);
         }

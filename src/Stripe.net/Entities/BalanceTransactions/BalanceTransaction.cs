@@ -37,7 +37,7 @@ namespace Stripe
         public long Fee { get; set; }
 
         [JsonProperty("fee_details")]
-        public List<Fee> FeeDetails { get; set; }
+        public List<BalanceTransactionFeeDetail> FeeDetails { get; set; }
 
         [JsonProperty("net")]
         public long Net { get; set; }
@@ -46,7 +46,6 @@ namespace Stripe
         public string ReportingCategory { get; set; }
 
         #region Expandable Source
-
         [JsonIgnore]
         public string SourceId
         {

@@ -25,18 +25,14 @@ namespace Stripe
 
         public override string BasePath => "/v1/subscriptions";
 
-        public virtual Subscription Cancel(string id, SubscriptionCancelOptions options, RequestOptions requestOptions = null)
+        public virtual Subscription Cancel(string id, SubscriptionCancelOptions options = null, RequestOptions requestOptions = null)
         {
-            return this.DeleteEntity(id, options, requestOptions);
+            return this.Request(HttpMethod.Delete, $"{this.InstanceUrl(id)}", options, requestOptions);
         }
 
-<<<<<<< HEAD
-        public virtual Task<Subscription> CancelAsync(string id, SubscriptionCancelOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<Subscription> CancelAsync(string id, SubscriptionCancelOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
+        public virtual Task<Subscription> CancelAsync(string id, SubscriptionCancelOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
         {
-            return this.DeleteEntityAsync(id, options, requestOptions, cancellationToken);
+            return this.RequestAsync(HttpMethod.Delete, $"{this.InstanceUrl(id)}", options, requestOptions, cancellationToken);
         }
 
         public virtual Subscription Create(SubscriptionCreateOptions options, RequestOptions requestOptions = null)
@@ -49,16 +45,22 @@ namespace Stripe
             return this.CreateEntityAsync(options, requestOptions, cancellationToken);
         }
 
+        public virtual DeletedDiscount DeleteDiscount(string id, SubscriptionDeleteDiscountOptions options = null, RequestOptions requestOptions = null)
+        {
+            return this.Request<DeletedDiscount>(HttpMethod.Delete, $"{this.InstanceUrl(id)}/discount", options, requestOptions);
+        }
+
+        public virtual Task<DeletedDiscount> DeleteDiscountAsync(string id, SubscriptionDeleteDiscountOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
+        {
+            return this.RequestAsync<DeletedDiscount>(HttpMethod.Delete, $"{this.InstanceUrl(id)}/discount", options, requestOptions, cancellationToken);
+        }
+
         public virtual Subscription Get(string id, SubscriptionGetOptions options = null, RequestOptions requestOptions = null)
         {
             return this.GetEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<Subscription> GetAsync(string id, SubscriptionGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<Subscription> GetAsync(string id, SubscriptionGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.GetEntityAsync(id, options, requestOptions, cancellationToken);
         }
@@ -83,11 +85,7 @@ namespace Stripe
             return this.UpdateEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<Subscription> UpdateAsync(string id, SubscriptionUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<Subscription> UpdateAsync(string id, SubscriptionUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.UpdateEntityAsync(id, options, requestOptions, cancellationToken);
         }

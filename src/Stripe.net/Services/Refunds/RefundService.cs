@@ -40,13 +40,34 @@ namespace Stripe
             return this.GetEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<Refund> GetAsync(string id, RefundGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<Refund> GetAsync(string id, RefundGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.GetEntityAsync(id, options, requestOptions, cancellationToken);
+        }
+
+        public virtual Refund Get(string id, RefundGetOptions options = null, RequestOptions requestOptions = null)
+        {
+            return this.GetEntity(id, options, requestOptions);
+        }
+
+        public virtual Task<Refund> GetAsync(string id, RefundGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
+        {
+            return this.GetEntityAsync(id, options, requestOptions, cancellationToken);
+        }
+
+        public virtual StripeList<Refund> List(RefundListOptions options = null, RequestOptions requestOptions = null)
+        {
+            return this.ListEntities(options, requestOptions);
+        }
+
+        public virtual Task<StripeList<Refund>> ListAsync(RefundListOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
+        {
+            return this.ListEntitiesAsync(options, requestOptions, cancellationToken);
+        }
+
+        public virtual IEnumerable<Refund> ListAutoPaging(RefundListOptions options = null, RequestOptions requestOptions = null)
+        {
+            return this.ListEntitiesAutoPaging(options, requestOptions);
         }
 
         public virtual StripeList<Refund> List(RefundListOptions options = null, RequestOptions requestOptions = null)
@@ -69,11 +90,7 @@ namespace Stripe
             return this.UpdateEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<Refund> UpdateAsync(string id, RefundUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<Refund> UpdateAsync(string id, RefundUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.UpdateEntityAsync(id, options, requestOptions, cancellationToken);
         }

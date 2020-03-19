@@ -13,6 +13,9 @@ namespace Stripe.Issuing
         [JsonProperty("object")]
         public string Object { get; set; }
 
+        [JsonProperty("amount")]
+        public long Amount { get; set; }
+
         [JsonProperty("approved")]
         public bool Approved { get; set; }
 
@@ -32,7 +35,6 @@ namespace Stripe.Issuing
         public Card Card { get; set; }
 
         #region Expandable Cardholder
-
         [JsonIgnore]
         public string CardholderId
         {
@@ -56,6 +58,9 @@ namespace Stripe.Issuing
         [JsonConverter(typeof(DateTimeConverter))]
         public DateTime Created { get; set; }
 
+        [JsonProperty("currency")]
+        public string Currency { get; set; }
+
         [JsonProperty("held_amount")]
         public long HeldAmount { get; set; }
 
@@ -68,6 +73,12 @@ namespace Stripe.Issuing
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
 
+        [JsonProperty("merchant_amount")]
+        public long MerchantAmount { get; set; }
+
+        [JsonProperty("merchant_currency")]
+        public string MerchantCurrency { get; set; }
+
         [JsonProperty("merchant_data")]
         public MerchantData MerchantData { get; set; }
 
@@ -79,6 +90,9 @@ namespace Stripe.Issuing
 
         [JsonProperty("pending_held_amount")]
         public long PendingHeldAmount { get; set; }
+
+        [JsonProperty("pending_request")]
+        public AuthorizationPendingRequest PendingRequest { get; set; }
 
         [JsonProperty("request_history")]
         public List<RequestHistory> RequestHistory { get; set; }
@@ -95,7 +109,6 @@ namespace Stripe.Issuing
         [JsonProperty("wallet")]
         public string Wallet { get; set; }
 
-        [Obsolete("Use Wallet instead")]
         [JsonProperty("wallet_provider")]
         public string WalletProvider { get; set; }
     }

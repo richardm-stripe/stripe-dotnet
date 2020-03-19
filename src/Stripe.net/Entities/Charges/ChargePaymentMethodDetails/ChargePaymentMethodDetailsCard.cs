@@ -16,12 +16,9 @@ namespace Stripe
         [JsonProperty("country")]
         public string Country { get; set; }
 
-<<<<<<< HEAD
         [JsonProperty("description")]
         public string Description { get; set; }
 
-=======
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("exp_month")]
         public long ExpMonth { get; set; }
 
@@ -34,7 +31,6 @@ namespace Stripe
         [JsonProperty("funding")]
         public string Funding { get; set; }
 
-<<<<<<< HEAD
         [JsonProperty("iin")]
         public string Iin { get; set; }
 
@@ -44,11 +40,6 @@ namespace Stripe
         [JsonProperty("issuer")]
         public string Issuer { get; set; }
 
-=======
-        [JsonProperty("installments")]
-        public ChargePaymentMethodDetailsCardInstallments Installments { get; set; }
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("last4")]
         public string Last4 { get; set; }
 

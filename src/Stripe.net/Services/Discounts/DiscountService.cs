@@ -26,11 +26,7 @@ namespace Stripe
             return this.Request(HttpMethod.Delete, $"/v1/customers/{id}/discount", null, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<Discount> DeleteCustomerDiscountAsync(string id, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<Discount> DeleteCustomerDiscountAsync(string id, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.RequestAsync(HttpMethod.Delete, $"/v1/customers/{id}/discount", null, requestOptions, cancellationToken);
         }
@@ -40,11 +36,7 @@ namespace Stripe
             return this.Request(HttpMethod.Delete, $"/v1/subscriptions/{id}/discount", null, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<Discount> DeleteSubscriptionDiscountAsync(string id, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<Discount> DeleteSubscriptionDiscountAsync(string id, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.RequestAsync(HttpMethod.Delete, $"/v1/subscriptions/{id}/discount", null, requestOptions, cancellationToken);
         }

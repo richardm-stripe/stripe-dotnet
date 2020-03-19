@@ -5,7 +5,7 @@ namespace Stripe
     using Newtonsoft.Json;
     using Stripe.Infrastructure;
 
-    public class TaxRateGetOptions : ListOptionsWithCreated
+    public class TaxRateGetOptions : BaseOptions
     {
     }
 }

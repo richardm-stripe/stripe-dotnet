@@ -10,7 +10,6 @@ namespace Stripe.Issuing
         [JsonProperty("address_line1_check")]
         public string AddressLine1Check { get; set; }
 
-<<<<<<< HEAD
         [JsonProperty("address_postal_code_check")]
         public string AddressPostalCodeCheck { get; set; }
 
@@ -19,11 +18,6 @@ namespace Stripe.Issuing
         public string AddressZipCheck { get; set; }
 
         [Obsolete("Use ThreeDSecure instead")]
-=======
-        [JsonProperty("address_zip_check")]
-        public string AddressZipCheck { get; set; }
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("authentication")]
         public string Authentication { get; set; }
 

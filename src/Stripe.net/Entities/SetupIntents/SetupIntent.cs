@@ -14,10 +14,6 @@ namespace Stripe
         public string Object { get; set; }
 
         #region Expandable Application
-<<<<<<< HEAD
-=======
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
         public string ApplicationId
         {
@@ -48,10 +44,6 @@ namespace Stripe
         public DateTime Created { get; set; }
 
         #region Expandable Customer
-<<<<<<< HEAD
-=======
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
         public string CustomerId
         {
@@ -81,10 +73,6 @@ namespace Stripe
         public bool Livemode { get; set; }
 
         #region Expandable Mandate
-<<<<<<< HEAD
-=======
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
         public string MandateId
         {
@@ -110,12 +98,7 @@ namespace Stripe
         [JsonProperty("next_action")]
         public SetupIntentNextAction NextAction { get; set; }
 
-<<<<<<< HEAD
         #region Expandable On Behalf Of
-=======
-        #region Expandable OnBehalfOf (Account)
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
         public string OnBehalfOfId
         {
@@ -135,12 +118,7 @@ namespace Stripe
         internal ExpandableField<Account> InternalOnBehalfOf { get; set; }
         #endregion
 
-<<<<<<< HEAD
         #region Expandable Payment Method
-=======
-        #region Expandable PaymentMethod
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
         public string PaymentMethodId
         {
@@ -166,12 +144,7 @@ namespace Stripe
         [JsonProperty("payment_method_types")]
         public List<string> PaymentMethodTypes { get; set; }
 
-<<<<<<< HEAD
         #region Expandable Single Use Mandate
-=======
-        #region Expandable SingleUseMandate
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
         public string SingleUseMandateId
         {

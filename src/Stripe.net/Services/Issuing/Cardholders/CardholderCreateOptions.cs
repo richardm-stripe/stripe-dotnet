@@ -34,6 +34,9 @@ namespace Stripe.Issuing
         [JsonProperty("phone_number")]
         public string PhoneNumber { get; set; }
 
+        [JsonProperty("spending_controls")]
+        public CardholderSpendingControlsOptions SpendingControls { get; set; }
+
         [JsonProperty("status")]
         public string Status { get; set; }
 

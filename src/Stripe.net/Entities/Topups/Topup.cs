@@ -17,12 +17,12 @@ namespace Stripe
         public long Amount { get; set; }
 
         #region Expandable Balance Transaction
-<<<<<<< HEAD
-=======
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
-        public string BalanceTransactionId { get; set; }
+        public string BalanceTransactionId
+        {
+            get => this.InternalBalanceTransaction?.Id;
+            set => this.InternalBalanceTransaction = SetExpandableFieldId(value, this.InternalBalanceTransaction);
+        }
 
         [JsonIgnore]
         public BalanceTransaction BalanceTransaction
@@ -47,8 +47,7 @@ namespace Stripe
         public string Description { get; set; }
 
         [JsonProperty("expected_availability_date")]
-        [JsonConverter(typeof(DateTimeConverter))]
-        public DateTime? ExpectedAvailabilityDate { get; set; }
+        public long? ExpectedAvailabilityDate { get; set; }
 
         [JsonProperty("failure_code")]
         public string FailureCode { get; set; }

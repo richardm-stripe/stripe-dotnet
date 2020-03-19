@@ -50,6 +50,9 @@ namespace Stripe.Issuing
         [JsonProperty("requirements")]
         public CardholderRequirements Requirements { get; set; }
 
+        [JsonProperty("spending_controls")]
+        public CardholderSpendingControls SpendingControls { get; set; }
+
         [JsonProperty("status")]
         public string Status { get; set; }
 

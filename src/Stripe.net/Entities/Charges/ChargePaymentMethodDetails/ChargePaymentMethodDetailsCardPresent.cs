@@ -31,17 +31,6 @@ namespace Stripe
         [JsonProperty("generated_card")]
         public string GeneratedCard { get; set; }
 
-<<<<<<< HEAD
-=======
-        [Obsolete("Use GeneratedCard instead.")]
-        [JsonIgnore]
-        public string GeneratedCardId
-        {
-            get => this.GeneratedCard;
-            set => this.GeneratedCardId = value;
-        }
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("last4")]
         public string Last4 { get; set; }
 

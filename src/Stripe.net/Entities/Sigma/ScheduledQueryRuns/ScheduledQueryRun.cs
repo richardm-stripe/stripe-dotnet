@@ -22,10 +22,13 @@ namespace Stripe.Sigma
         public DateTime DataLoadTime { get; set; }
 
         [JsonProperty("error")]
-        public string Error { get; set; }
+        public ScheduledQueryRunError Error { get; set; }
 
         [JsonProperty("file")]
         public File File { get; set; }
+
+        [JsonProperty("livemode")]
+        public bool Livemode { get; set; }
 
         [JsonProperty("result_available_until")]
         [JsonConverter(typeof(DateTimeConverter))]

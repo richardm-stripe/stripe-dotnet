@@ -39,7 +39,6 @@ namespace Stripe.Checkout
             return this.GetEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<Session> GetAsync(string id, SessionGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
         {
             return this.GetEntityAsync(id, options, requestOptions, cancellationToken);
@@ -58,11 +57,6 @@ namespace Stripe.Checkout
         public virtual IEnumerable<Session> ListAutoPaging(SessionListOptions options = null, RequestOptions requestOptions = null)
         {
             return this.ListEntitiesAutoPaging(options, requestOptions);
-=======
-        public virtual Task<Session> GetAsync(string id, SessionGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            return this.GetEntityAsync(id, options, requestOptions, cancellationToken);
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         }
     }
 }

@@ -19,16 +19,10 @@ namespace Stripe
         [JsonProperty("payment_method")]
         public string PaymentMethod { get; set; }
 
-<<<<<<< HEAD
         [JsonProperty("payment_method_options")]
         public SetupIntentPaymentMethodOptionsOptions PaymentMethodOptions { get; set; }
 
-=======
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("payment_method_types")]
         public List<string> PaymentMethodTypes { get; set; }
-
-        [JsonProperty("usage")]
-        public string Usage { get; set; }
     }
 }

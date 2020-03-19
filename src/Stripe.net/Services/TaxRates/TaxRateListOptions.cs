@@ -15,6 +15,6 @@ namespace Stripe
 
         [JsonProperty("percentage")]
         [JsonConverter(typeof(AnyOfConverter))]
-        public AnyOf<decimal?, TaxRatePercentageRangeOptions> Percentage { get; set; }
+        public AnyOf<DateTime?, DateRangeOptions> Percentage { get; set; }
     }
 }

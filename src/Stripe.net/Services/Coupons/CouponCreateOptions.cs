@@ -7,9 +7,6 @@ namespace Stripe
 
     public class CouponCreateOptions : BaseOptions, IHasId, IHasMetadata
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
         [JsonProperty("amount_off")]
         public long? AmountOff { get; set; }
 
@@ -21,6 +18,9 @@ namespace Stripe
 
         [JsonProperty("duration_in_months")]
         public long? DurationInMonths { get; set; }
+
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
         [JsonProperty("max_redemptions")]
         public long? MaxRedemptions { get; set; }

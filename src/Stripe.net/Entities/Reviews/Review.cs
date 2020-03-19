@@ -13,6 +13,9 @@ namespace Stripe
         [JsonProperty("object")]
         public string Object { get; set; }
 
+        [JsonProperty("billing_zip")]
+        public string BillingZip { get; set; }
+
         #region Expandable Charge
         [JsonIgnore]
         public string ChargeId
@@ -33,9 +36,18 @@ namespace Stripe
         internal ExpandableField<Charge> InternalCharge { get; set; }
         #endregion
 
+        [JsonProperty("closed_reason")]
+        public string ClosedReason { get; set; }
+
         [JsonProperty("created")]
         [JsonConverter(typeof(DateTimeConverter))]
         public DateTime Created { get; set; }
+
+        [JsonProperty("ip_address")]
+        public string IpAddress { get; set; }
+
+        [JsonProperty("ip_address_location")]
+        public ReviewIpAddressLocation IpAddressLocation { get; set; }
 
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
@@ -43,7 +55,10 @@ namespace Stripe
         [JsonProperty("open")]
         public bool Open { get; set; }
 
-        #region Expandable PaymentIntent
+        [JsonProperty("opened_reason")]
+        public string OpenedReason { get; set; }
+
+        #region Expandable Payment Intent
         [JsonIgnore]
         public string PaymentIntentId
         {
@@ -65,5 +80,8 @@ namespace Stripe
 
         [JsonProperty("reason")]
         public string Reason { get; set; }
+
+        [JsonProperty("session")]
+        public ReviewSession Session { get; set; }
     }
 }

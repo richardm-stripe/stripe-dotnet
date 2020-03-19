@@ -13,13 +13,6 @@ namespace Stripe
         [JsonProperty("payment_intent")]
         public string PaymentIntent { get; set; }
 
-<<<<<<< HEAD
-=======
-        [Obsolete("This parameter is deprecated. Filter the returned list of charges instead.")]
-        [JsonProperty("source")]
-        public ChargeSourceListOptions Source { get; set; }
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("transfer_group")]
         public string TransferGroup { get; set; }
     }

@@ -182,11 +182,8 @@ namespace Stripe
 
         public const string PaymentIntentPaymentFailed = "payment_intent.payment_failed";
 
-<<<<<<< HEAD
         public const string PaymentIntentProcessing = "payment_intent.processing";
 
-=======
->>>>>>> Remove all docs from entities, options and services (#1913)
         public const string PaymentIntentSucceeded = "payment_intent.succeeded";
 
         public const string PaymentMethodAttached = "payment_method.attached";

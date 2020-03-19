@@ -27,11 +27,7 @@ namespace Stripe
             return this.CreateNestedEntity(parentId, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<UsageRecord> CreateAsync(string parentId, UsageRecordCreateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<UsageRecord> CreateAsync(string parentId, UsageRecordCreateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.CreateNestedEntityAsync(parentId, options, requestOptions, cancellationToken);
         }

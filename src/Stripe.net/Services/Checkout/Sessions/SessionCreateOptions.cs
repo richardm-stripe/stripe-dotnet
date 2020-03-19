@@ -16,11 +16,11 @@ namespace Stripe.Checkout
         [JsonProperty("client_reference_id")]
         public string ClientReferenceId { get; set; }
 
-        [JsonProperty("customer_email")]
-        public string CustomerEmail { get; set; }
-
         [JsonProperty("customer")]
         public string Customer { get; set; }
+
+        [JsonProperty("customer_email")]
+        public string CustomerEmail { get; set; }
 
         [JsonProperty("line_items")]
         public List<SessionLineItemOptions> LineItems { get; set; }
@@ -43,12 +43,9 @@ namespace Stripe.Checkout
         [JsonProperty("setup_intent_data")]
         public SessionSetupIntentDataOptions SetupIntentData { get; set; }
 
-<<<<<<< HEAD
         [JsonProperty("shipping_address_collection")]
         public SessionShippingAddressCollectionOptions ShippingAddressCollection { get; set; }
 
-=======
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("submit_type")]
         public string SubmitType { get; set; }
 

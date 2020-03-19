@@ -50,12 +50,27 @@ namespace Stripe.Issuing
         [JsonProperty("pin")]
         public CardPin Pin { get; set; }
 
-<<<<<<< HEAD
-        #region Expandable Replacement For
-=======
-        #region Expandable ReplacementFor
+        #region Expandable Replaced By
+        [JsonIgnore]
+        public string ReplacedById
+        {
+            get => this.InternalReplacedBy?.Id;
+            set => this.InternalReplacedBy = SetExpandableFieldId(value, this.InternalReplacedBy);
+        }
 
->>>>>>> Remove all docs from entities, options and services (#1913)
+        [JsonIgnore]
+        public Card ReplacedBy
+        {
+            get => this.InternalReplacedBy?.ExpandedObject;
+            set => this.InternalReplacedBy = SetExpandableFieldObject(value, this.InternalReplacedBy);
+        }
+
+        [JsonProperty("replaced_by")]
+        [JsonConverter(typeof(ExpandableFieldConverter<Card>))]
+        internal ExpandableField<Card> InternalReplacedBy { get; set; }
+        #endregion
+
+        #region Expandable Replacement For
         [JsonIgnore]
         public string ReplacementForId
         {
@@ -80,6 +95,9 @@ namespace Stripe.Issuing
 
         [JsonProperty("shipping")]
         public CardShipping Shipping { get; set; }
+
+        [JsonProperty("spending_controls")]
+        public CardSpendingControls SpendingControls { get; set; }
 
         [JsonProperty("status")]
         public string Status { get; set; }

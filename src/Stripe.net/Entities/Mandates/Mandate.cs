@@ -22,12 +22,7 @@ namespace Stripe
         [JsonProperty("multi_use")]
         public MandateMultiUse MultiUse { get; set; }
 
-<<<<<<< HEAD
         #region Expandable Payment Method
-=======
-        #region Expandable PaymentMethod
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
         public string PaymentMethodId
         {

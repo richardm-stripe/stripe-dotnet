@@ -15,5 +15,8 @@ namespace Stripe
 
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
+
+        [JsonProperty("sepa_debit")]
+        public PaymentMethodSepaDebitUpdateOptions SepaDebit { get; set; }
     }
 }

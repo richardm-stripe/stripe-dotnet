@@ -19,10 +19,6 @@ namespace Stripe
         [JsonProperty("application")]
         public string Application { get; set; }
 
-        [Obsolete("This property was never returned. Use Application instead")]
-        [JsonProperty("connect")]
-        public bool Connect { get; set; }
-
         [JsonProperty("created")]
         [JsonConverter(typeof(DateTimeConverter))]
         public DateTime Created { get; set; }
@@ -36,12 +32,9 @@ namespace Stripe
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
 
-<<<<<<< HEAD
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
 
-=======
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("secret")]
         public string Secret { get; set; }
 

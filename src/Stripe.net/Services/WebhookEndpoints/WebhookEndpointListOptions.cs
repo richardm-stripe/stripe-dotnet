@@ -5,7 +5,7 @@ namespace Stripe
     using Newtonsoft.Json;
     using Stripe.Infrastructure;
 
-    public class WebhookEndpointListOptions : ListOptionsWithCreated
+    public class WebhookEndpointListOptions : ListOptions
     {
     }
 }

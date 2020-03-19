@@ -35,18 +35,14 @@ namespace Stripe.Issuing
             return this.CreateEntityAsync(options, requestOptions, cancellationToken);
         }
 
-        public virtual CardDetails Details(string id, RequestOptions requestOptions = null)
+        public virtual CardDetails Details(string id, CardDetailsOptions options = null, RequestOptions requestOptions = null)
         {
-            return this.Request<CardDetails>(HttpMethod.Get, $"{this.InstanceUrl(id)}/details", null, requestOptions);
+            return this.Request<CardDetails>(HttpMethod.Get, $"{this.InstanceUrl(id)}/details", options, requestOptions);
         }
 
-<<<<<<< HEAD
-        public virtual Task<CardDetails> DetailsAsync(string id, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<CardDetails> DetailsAsync(string id, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
+        public virtual Task<CardDetails> DetailsAsync(string id, CardDetailsOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
         {
-            return this.RequestAsync<CardDetails>(HttpMethod.Get, $"{this.InstanceUrl(id)}/details", null, requestOptions, cancellationToken);
+            return this.RequestAsync<CardDetails>(HttpMethod.Get, $"{this.InstanceUrl(id)}/details", options, requestOptions, cancellationToken);
         }
 
         public virtual Card Get(string id, CardGetOptions options = null, RequestOptions requestOptions = null)
@@ -54,11 +50,7 @@ namespace Stripe.Issuing
             return this.GetEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<Card> GetAsync(string id, CardGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<Card> GetAsync(string id, CardGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.GetEntityAsync(id, options, requestOptions, cancellationToken);
         }
@@ -83,11 +75,7 @@ namespace Stripe.Issuing
             return this.UpdateEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<Card> UpdateAsync(string id, CardUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<Card> UpdateAsync(string id, CardUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.UpdateEntityAsync(id, options, requestOptions, cancellationToken);
         }

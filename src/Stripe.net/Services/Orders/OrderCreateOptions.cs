@@ -7,21 +7,12 @@ namespace Stripe
 
     public class OrderCreateOptions : BaseOptions, IHasMetadata
     {
-<<<<<<< HEAD
         [JsonProperty("coupon")]
         public string Coupon { get; set; }
 
         [JsonProperty("currency")]
         public string Currency { get; set; }
 
-=======
-        [JsonProperty("currency")]
-        public string Currency { get; set; }
-
-        [JsonProperty("coupon")]
-        public string Coupon { get; set; }
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("customer")]
         public string Customer { get; set; }
 

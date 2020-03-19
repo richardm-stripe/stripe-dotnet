@@ -32,7 +32,7 @@ namespace Stripe
         public string Name { get; set; }
 
         [JsonProperty("package_dimensions")]
-        public PackageDimensionOptions PackageDimensions { get; set; }
+        public PackageDimensionsOptions PackageDimensions { get; set; }
 
         [JsonProperty("shippable")]
         public bool? Shippable { get; set; }

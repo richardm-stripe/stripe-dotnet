@@ -29,7 +29,6 @@ namespace Stripe
         public SubscriptionScheduleCurrentPhase CurrentPhase { get; set; }
 
         #region Expandable Customer
-
         [JsonIgnore]
         public string CustomerId
         {
@@ -69,7 +68,7 @@ namespace Stripe
         public DateTime? ReleasedAt { get; set; }
 
         [JsonProperty("released_subscription")]
-        public string ReleasedSubscriptionId { get; set; }
+        public string ReleasedSubscription { get; set; }
 
         [JsonProperty("renewal_interval")]
         public SubscriptionScheduleRenewalInterval RenewalInterval { get; set; }
@@ -78,7 +77,6 @@ namespace Stripe
         public string Status { get; set; }
 
         #region Expandable Subscription
-
         [JsonIgnore]
         public string SubscriptionId
         {

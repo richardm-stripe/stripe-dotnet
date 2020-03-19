@@ -29,7 +29,7 @@ namespace Stripe
         public Dictionary<string, string> Metadata { get; set; }
 
         [JsonProperty("period")]
-        public InvoiceItemPeriodOptions Period { get; set; }
+        public PeriodOptions Period { get; set; }
 
         [JsonProperty("quantity")]
         public long? Quantity { get; set; }
@@ -44,6 +44,6 @@ namespace Stripe
         public long? UnitAmount { get; set; }
 
         [JsonProperty("unit_amount_decimal")]
-        public decimal? UnitAmountDecimal { get; set; }
+        public string UnitAmountDecimal { get; set; }
     }
 }

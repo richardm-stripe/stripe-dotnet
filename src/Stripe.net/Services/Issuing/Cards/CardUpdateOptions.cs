@@ -10,12 +10,11 @@ namespace Stripe.Issuing
         [JsonProperty("authorization_controls")]
         public AuthorizationControlsOptions AuthorizationControls { get; set; }
 
-        [Obsolete("This parameter does not exist and was added to the library incorrectly.")]
-        [JsonProperty("billing")]
-        public BillingOptions Billing { get; set; }
-
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
+
+        [JsonProperty("spending_controls")]
+        public CardSpendingControlsOptions SpendingControls { get; set; }
 
         [JsonProperty("status")]
         public string Status { get; set; }

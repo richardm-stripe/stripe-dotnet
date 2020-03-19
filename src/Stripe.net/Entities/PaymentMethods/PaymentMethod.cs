@@ -30,10 +30,6 @@ namespace Stripe
         public DateTime Created { get; set; }
 
         #region Expandable Customer
-<<<<<<< HEAD
-=======
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonIgnore]
         public string CustomerId
         {

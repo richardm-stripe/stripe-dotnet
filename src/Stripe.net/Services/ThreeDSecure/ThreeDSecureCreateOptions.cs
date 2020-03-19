@@ -10,18 +10,8 @@ namespace Stripe
         [JsonProperty("amount")]
         public long? Amount { get; set; }
 
-<<<<<<< HEAD
-=======
-        [JsonProperty("currency")]
-        public string Currency { get; set; }
-
-        [JsonProperty("return_url")]
-        public string ReturnUrl { get; set; }
-
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("card")]
-        [AllowNameMismatch]
-        public string CardTokenOrCardId { get; set; }
+        public string Card { get; set; }
 
         [JsonProperty("currency")]
         public string Currency { get; set; }

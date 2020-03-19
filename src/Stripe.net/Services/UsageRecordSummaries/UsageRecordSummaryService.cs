@@ -27,11 +27,7 @@ namespace Stripe
             return this.ListNestedEntities(parentId, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<StripeList<UsageRecordSummary>> ListAsync(string parentId, UsageRecordSummaryListOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<StripeList<UsageRecordSummary>> ListAsync(string parentId, UsageRecordSummaryListOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.ListNestedEntitiesAsync(parentId, options, requestOptions, cancellationToken);
         }

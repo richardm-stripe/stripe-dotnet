@@ -26,6 +26,9 @@ namespace Stripe
         [JsonConverter(typeof(DateTimeConverter))]
         public DateTime Created { get; set; }
 
+        [JsonProperty("email")]
+        public string Email { get; set; }
+
         [JsonProperty("livemode")]
         public bool Livemode { get; set; }
 
@@ -33,6 +36,6 @@ namespace Stripe
         public string Type { get; set; }
 
         [JsonProperty("used")]
-        public bool? Used { get; set; }
+        public bool Used { get; set; }
     }
 }

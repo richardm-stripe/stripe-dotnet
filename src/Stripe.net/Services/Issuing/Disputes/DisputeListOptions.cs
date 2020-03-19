@@ -7,7 +7,7 @@ namespace Stripe.Issuing
 
     public class DisputeListOptions : ListOptionsWithCreated
     {
-        [JsonProperty("transaction")]
-        public string Transaction { get; set; }
+        [JsonProperty("disputed_transaction")]
+        public string DisputedTransaction { get; set; }
     }
 }

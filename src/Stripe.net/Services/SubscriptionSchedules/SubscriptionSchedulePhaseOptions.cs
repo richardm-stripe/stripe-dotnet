@@ -38,12 +38,9 @@ namespace Stripe
         [JsonProperty("plans")]
         public List<SubscriptionSchedulePhaseItemOptions> Plans { get; set; }
 
-<<<<<<< HEAD
         [JsonProperty("proration_behavior")]
         public string ProrationBehavior { get; set; }
 
-=======
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("start_date")]
         [JsonConverter(typeof(DateTimeConverter))]
         public DateTime? StartDate { get; set; }

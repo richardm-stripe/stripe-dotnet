@@ -7,12 +7,9 @@ namespace Stripe
 
     public class SourceUpdateOptions : BaseOptions, IHasMetadata
     {
-<<<<<<< HEAD
         [JsonProperty("amount")]
         public long? Amount { get; set; }
 
-=======
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("mandate")]
         public SourceMandateOptions Mandate { get; set; }
 
@@ -24,8 +21,5 @@ namespace Stripe
 
         [JsonProperty("source_order")]
         public SourceSourceOrderOptions SourceOrder { get; set; }
-
-        [JsonProperty("card")]
-        public SourceCardUpdateOptions Card { get; set; }
     }
 }

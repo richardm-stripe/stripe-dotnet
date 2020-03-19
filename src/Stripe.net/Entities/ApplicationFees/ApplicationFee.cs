@@ -133,6 +133,6 @@ namespace Stripe
         public bool Refunded { get; set; }
 
         [JsonProperty("refunds")]
-        public StripeList<ApplicationFeeRefund> Refunds { get; set; }
+        public StripeList<FeeRefund> Refunds { get; set; }
     }
 }

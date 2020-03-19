@@ -17,12 +17,9 @@ namespace Stripe
         [JsonProperty("disabled_reason")]
         public string DisabledReason { get; set; }
 
-<<<<<<< HEAD
         [JsonProperty("errors")]
         public List<AccountRequirementsError> Errors { get; set; }
 
-=======
->>>>>>> Remove all docs from entities, options and services (#1913)
         [JsonProperty("eventually_due")]
         public List<string> EventuallyDue { get; set; }
 

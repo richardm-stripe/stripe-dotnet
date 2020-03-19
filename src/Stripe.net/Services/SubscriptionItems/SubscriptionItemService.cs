@@ -41,11 +41,7 @@ namespace Stripe
             return this.DeleteEntity(id, null, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<SubscriptionItem> DeleteAsync(string id, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<SubscriptionItem> DeleteAsync(string id, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.DeleteEntityAsync(id, null, requestOptions, cancellationToken);
         }
@@ -55,11 +51,7 @@ namespace Stripe
             return this.GetEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<SubscriptionItem> GetAsync(string id, SubscriptionItemGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<SubscriptionItem> GetAsync(string id, SubscriptionItemGetOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.GetEntityAsync(id, options, requestOptions, cancellationToken);
         }
@@ -84,13 +76,19 @@ namespace Stripe
             return this.UpdateEntity(id, options, requestOptions);
         }
 
-<<<<<<< HEAD
         public virtual Task<SubscriptionItem> UpdateAsync(string id, SubscriptionItemUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
-=======
-        public virtual Task<SubscriptionItem> UpdateAsync(string id, SubscriptionItemUpdateOptions options, RequestOptions requestOptions = null, CancellationToken cancellationToken = default(CancellationToken))
->>>>>>> Rename all parameters in services' methods to be consistent (#1912)
         {
             return this.UpdateEntityAsync(id, options, requestOptions, cancellationToken);
+        }
+
+        public virtual unknown UsageRecordSummaries(string id, SubscriptionItemUsageRecordSummariesOptions options = null, RequestOptions requestOptions = null)
+        {
+            return this.Request<unknown>(HttpMethod.Get, $"{this.InstanceUrl(id)}/usage_record_summaries", options, requestOptions);
+        }
+
+        public virtual Task<unknown> UsageRecordSummariesAsync(string id, SubscriptionItemUsageRecordSummariesOptions options = null, RequestOptions requestOptions = null, CancellationToken cancellationToken = default)
+        {
+            return this.RequestAsync<unknown>(HttpMethod.Get, $"{this.InstanceUrl(id)}/usage_record_summaries", options, requestOptions, cancellationToken);
         }
     }
 }

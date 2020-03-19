@@ -11,7 +11,7 @@ namespace Stripe
         public decimal? ApplicationFeePercent { get; set; }
 
         [JsonProperty("billing_cycle_anchor")]
-        public SubscriptionBillingCycleAnchor BillingCycleAnchor { get; set; }
+        public string BillingCycleAnchor { get; set; }
 
         [JsonProperty("billing_thresholds")]
         public SubscriptionBillingThresholdsOptions BillingThresholds { get; set; }
@@ -50,15 +50,14 @@ namespace Stripe
         [JsonProperty("off_session")]
         public bool? OffSession { get; set; }
 
+        [JsonProperty("pause_collection")]
+        public SubscriptionPauseCollectionOptions PauseCollection { get; set; }
+
         [JsonProperty("payment_behavior")]
         public string PaymentBehavior { get; set; }
 
         [JsonProperty("pending_invoice_item_interval")]
         public SubscriptionPendingInvoiceItemIntervalOptions PendingInvoiceItemInterval { get; set; }
-
-        [Obsolete("Use Items")]
-        [JsonProperty("plan")]
-        public string Plan { get; set; }
 
         [JsonProperty("prorate")]
         public bool? Prorate { get; set; }
@@ -70,11 +69,6 @@ namespace Stripe
         [JsonConverter(typeof(DateTimeConverter))]
         public DateTime? ProrationDate { get; set; }
 
-        [Obsolete("Use Items")]
-        [JsonProperty("quantity")]
-        public long? Quantity { get; set; }
-
-        [Obsolete("Use DefaultTaxRates")]
         [JsonProperty("tax_percent")]
         public decimal? TaxPercent { get; set; }
 
@@ -83,7 +77,7 @@ namespace Stripe
 
         [JsonProperty("trial_end")]
         [JsonConverter(typeof(AnyOfConverter))]
-        public AnyOf<DateTime?, SubscriptionTrialEnd> TrialEnd { get; set; }
+        public AnyOf<DateTime?, string> TrialEnd { get; set; }
 
         [JsonProperty("trial_from_plan")]
         public bool? TrialFromPlan { get; set; }
